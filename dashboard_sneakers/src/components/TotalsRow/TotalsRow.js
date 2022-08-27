@@ -6,7 +6,7 @@ import './TotalsRow.css'
 
 function TotalsRow () {
     return (
-<div className="container-principal">
+<div className="container-totalsRow">
     <TotalProducts />
     <TotalUsers />
     <TotalBrands />
