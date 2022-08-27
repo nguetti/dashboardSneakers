@@ -2,6 +2,7 @@ import "./App.css";
 import MidRow from "./components/MidRow/MidRow";
 import Navbar from "./components/Navbar/Navbar";
 import TotalsRow from "./components/TotalsRow/TotalsRow";
+import DetailRow from "./components/DetailRow/DetailRow";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div className="mainContainer">
         <TotalsRow />
         <MidRow />
+        <DetailRow />
       </div>
     </>
   );
