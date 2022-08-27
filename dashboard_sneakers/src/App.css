@@ -7,5 +7,12 @@
 
 .mainContainer{
   display: flex;
-  align-items: center;
+  align-content: center;
+}
+
+.mainContainerBottom{
+
+  display: flex;
+  justify-content: right;
+    
 }
