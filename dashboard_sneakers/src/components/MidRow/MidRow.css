@@ -13,9 +13,13 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 50%;
+    height: 55%;
 }
-
+.lastUser-boxContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .lastUser-top {
     background-color: #AD1357;
     color: #fff;
@@ -44,4 +48,13 @@
     border-top-left-radius: 10px;
     text-align: center;
     padding: 5px;
+}
+
+.lastUser-name {
+    margin: 15px 0;
+
+}
+
+.lastUser-bottom{
+    margin: 15px 0;
 }
