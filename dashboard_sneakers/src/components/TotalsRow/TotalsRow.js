@@ -2,7 +2,7 @@ import TotalProducts from "./TotalProducts";
 import TotalUsers from "./TotalUsers";
 import TotalBrands from "./TotalBrands";
 import "./TotalsRow.css";
-import Stack from 'react-bootstrap/Stack'
+
 
 
 function TotalsRow() {
