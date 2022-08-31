@@ -7,14 +7,13 @@ import Navbar from "react-bootstrap/Navbar";
 
 function NavBar() {
   return (
-    <Navbar className="navBar" expand="lg">
+    <Navbar className="navBar mb-2" expand="lg">
       <Container>
-        <Navbar.Brand style={{color: 'white'}} href="#home">
+        <Navbar.Brand style={{color: 'white'}} href="/">
         <img
               src="/img/LogoBlanco.png"
               width="140"
               height="25"
-              
               alt="React Bootstrap logo"
             />
         </Navbar.Brand>

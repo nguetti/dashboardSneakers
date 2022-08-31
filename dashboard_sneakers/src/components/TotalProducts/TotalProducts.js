@@ -23,7 +23,7 @@ function TotalProducts() {
   });
 
   return (
-    <div className="col-12 container-TotalProducts p-0">
+    <div className="col-12 container-TotalProducts mt-2 p-0">
       <div className="TotalProductsTop">Todos los Productos</div>
       <Table striped bordered hover>
       <thead>

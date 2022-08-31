@@ -1,34 +1,30 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import MidRow from "./components/MidRow/MidRow";
-import Brands from './components/MidRow/Brands'
-import NavBar from "./components/Navbar/Navbar";
-import TotalsRow from "./components/TotalsRow/TotalsRow";
-import DetailRow from "./components/DetailRow/DetailRow";
-import TotalProducts from "./components/TotalProducts/TotalProducts";
+import Brands from "./components/MidRow/Brands";
 import Container from "react-bootstrap/Container";
-import {Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import NavBar from "./components/Navbar/Navbar";
+import TotalProducts from './components/TotalProducts/TotalProducts'
+import Users from "./components/Users";
+import UserDetail from "./components/UserDetail";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Container fluid>
+   
+    <Container  className="d-flex flex-column min-vh-100 " fluid >
       <NavBar />
-      <div className="row m-2 justify-content-center align-items-center h-100">
-        <TotalsRow />
-        <MidRow />
-        <DetailRow />
-      </div>
-      <div className="row m-2">
-        <TotalProducts />
-      </div>
-
       <Routes>
-    <Route path="/" exact={true} component={App}/>
-    <Route path="/products" exact={true} component={TotalProducts} />
-    
-    <Route path="/brands" exact={true} component={Brands}/>
-  </Routes>;
+        <Route path="/" element={<Home />} exact></Route>  
+        <Route path="/products" element={<TotalProducts/>} />
+        <Route path="/brands"  element={<Brands/>} />
+        <Route path="/users"  element={<Users/>} />
+        <Route path="/userDetail/:id"  element={<UserDetail/>} />
+      </Routes>
+      <Footer />
     </Container>
+      
   );
 }
 
