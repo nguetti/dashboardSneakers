@@ -6,6 +6,7 @@ import TotalsRow from "./components/TotalsRow/TotalsRow";
 import DetailRow from "./components/DetailRow/DetailRow";
 import TotalProducts from "./components/TotalProducts/TotalProducts";
 import Container from "react-bootstrap/Container";
+import {BrowserRouter, Link, Route} from "react-router-dom"
 
 function App() {
   return (

@@ -32,11 +32,11 @@ function DetailRow() {
         
         <img src= {"/img/products/" + totalProducts.image} style={{ width: "30%" }} alt="Imagen del ultimo producto agregado"/>
       </div>
-      <div className="DetailRowContent">
+      <div className="DetailRowContent px-4">
         <p>{totalProducts.name}</p>
         <p>{totalProducts.price}</p>
       </div>
-      <p>
+      <p className="px-4">
       {totalProducts.description}
       </p>
     </div>
