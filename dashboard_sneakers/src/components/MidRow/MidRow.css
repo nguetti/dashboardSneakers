@@ -1,24 +1,24 @@
-.container-midRow{
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-}
+
 
 .lastUser-box {
-    width: 100%;
-    padding: 0px;
+    /* width: 100%;*/
+    padding: 0px; 
     box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
     border-radius: 10px;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    height: 55%;
+    justify-content: flex-start;*/
+    /* height: 55%;  */
 }
 .lastUser-boxContent{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
+}
+
+.lastUser-name {
+    margin-top: 1rem;
 }
 .lastUser-top {
     background-color: #AD1357;
@@ -30,15 +30,16 @@
 }
 
 .brand-box {
-    width: 100%;
-    padding: 0px;
+     /* width: 100%; */
+    padding: 0px; 
     box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
     border-radius: 10px;
-    display: flex;
+
+    /* display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    height: 45%;
-    margin-bottom: 20px;
+    justify-content: flex-start; */
+     /* height: 45%; */
+    /*margin-bottom: 20px; */
 }
 
 .brand-top{
@@ -50,11 +51,17 @@
     padding: 5px;
 }
 
-.lastUser-name {
-    margin: 15px 0;
-
+.lastUser-title {
+    margin: 0;
 }
 
+.brand-title {
+    margin: 0;
+}
 .lastUser-bottom{
-    margin: 15px 0;
+    background-color: #AD1357;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+
 }

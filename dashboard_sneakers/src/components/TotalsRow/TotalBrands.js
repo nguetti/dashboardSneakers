@@ -22,7 +22,7 @@ function TotalBrands() {
     });
 
   return (
-    <div className="totalsBox">
+    <div className="m-2 totalsBox">
       <p className="title">Total de marcas</p>
       <p className="total">{totalBrands}</p>
     </div>

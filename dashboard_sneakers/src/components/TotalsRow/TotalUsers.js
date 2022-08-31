@@ -25,7 +25,7 @@ function TotalUsers () {
 
 
     return (
-<div className="totalsBox" >
+<div className="m-2 totalsBox" >
     <p className="title">Total de usuarios</p>
     <p className="total">{totalUsers}</p>
 </div>

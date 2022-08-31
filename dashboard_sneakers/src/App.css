@@ -5,14 +5,3 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
-.mainContainer{
-  display: flex;
-  align-content: center;
-}
-
-.mainContainerBottom{
-
-  display: flex;
-  justify-content: right;
-    
-}

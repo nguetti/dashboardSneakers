@@ -1,25 +1,25 @@
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import MidRow from "./components/MidRow/MidRow";
-import Navbar from "./components/Navbar/Navbar";
+import NavBar from "./components/Navbar/NavBar";
 import TotalsRow from "./components/TotalsRow/TotalsRow";
 import DetailRow from "./components/DetailRow/DetailRow";
 import TotalProducts from "./components/TotalProducts/TotalProducts";
+import Container from "react-bootstrap/Container";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <div className="mainContainer">
+    <Container fluid>
+      <NavBar />
+      <div className="row m-2 justify-content-center align-items-center h-100">
         <TotalsRow />
         <MidRow />
         <DetailRow />
       </div>
-<div className="mainContainerBottom">
-  <TotalProducts />
-  
-  </div>
-      
-    </>
+      <div className="row m-2">
+        <TotalProducts />
+      </div>
+    </Container>
   );
 }
 

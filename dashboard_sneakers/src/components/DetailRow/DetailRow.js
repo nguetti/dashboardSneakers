@@ -2,7 +2,7 @@ import "./DetailRow.css";
 
 function DetailRow() {
   return (
-    <div className="container-DetailRow">
+    <div className="col-12 col-lg-6 p-0 container-DetailRow">
       <div className="DetailRowTop">Ultimo Producto Agregado</div>
       <div className="DetailRowImage">
         <img src="/img/18.jpeg" style={{ width: "30%" }} alt="Imagen del ultimo producto agregado"/>
@@ -11,7 +11,7 @@ function DetailRow() {
         <p>Nike Air Max</p>
         <p>$100.000</p>
       </div>
-      <p style={{ padding: "10px" }}>
+      <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and

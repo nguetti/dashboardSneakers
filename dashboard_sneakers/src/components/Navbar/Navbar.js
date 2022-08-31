@@ -1,31 +1,32 @@
-import './Navbar.css';
+import "./Navbar.css";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
-
-function Navbar() {
+function NavBar() {
   return (
-    <nav className='nav'>
-      <div className="nav-container">
-        <div className="nav-image">
-          <img src="/img/LogoBlanco.png" alt='element' style={{width: "150px"}}/>
-        </div>
-        <div className="nav-element">
-          <img src="/img/dashboard.png" alt='element' style={{width: "20px"}}/>
-          <p>Dashboard</p>
-        </div>
-        <div className="nav-element">
-          <img src="/img/zapatilla.png" alt='element' style={{width: "20px"}}/>
-          <p>Productos</p>
-        </div>
-        <div className="nav-element">
-          <img src="/img/rocket.png" alt='element' style={{width: "20px"}}/>
-          <p>Marcas</p>
-        </div>
-        <div className="nav-element">
-          <img src="/img/persona.png" alt='element' style={{width: "20px"}}/>
-          <p>Usuarios</p>
-        </div>
-      </div>
-    </nav>
+    <Navbar className="navBar" expand="lg">
+      <Container>
+        <Navbar.Brand style={{color: 'white'}} href="#home">
+        <img
+              src="/img/LogoBlanco.png"
+              width="140"
+              height="25"
+              
+              alt="React Bootstrap logo"
+            />
+        </Navbar.Brand>
+        <Navbar.Toggle  aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse style={{color: 'white'}} id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link style={{color: 'white'}} href="#">Dashboard</Nav.Link>
+            <Nav.Link style={{color: 'white'}} href="#">Productos</Nav.Link>
+            <Nav.Link style={{color: 'white'}} href="#">Marcas</Nav.Link>
+            <Nav.Link style={{color: 'white'}} href="#">Usuarios</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
-export default Navbar;
+export default NavBar;
