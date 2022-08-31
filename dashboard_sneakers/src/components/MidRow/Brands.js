@@ -1,41 +1,54 @@
 import "./MidRow.css";
 import Table from 'react-bootstrap/Table'
+import {useState, useEffect} from 'react'
 
 function Brand() {
+
+  const [totalBrands, settotalBrands] = useState([]);
+  useEffect(() => {
+    console.log("%cse monto el componente", "color: green");
+    fetch("/api/products")
+      .then((result) => result.json())
+      .then((data) => {
+        settotalBrands(data.countByBrand);
+      });
+  }, []);
+  
+  useEffect(() => {
+    console.log("%cse actualizo el componente", "color: blue");
+  }, [totalBrands]);
+  
+  useEffect(() => {
+    return () => console.log("%cse desmonto el componente", "color: red");
+  });
+
   return (
     <div className="brand-box">
       <div className="brand-top">
-        <p className="brand-title">Último usuario registrado</p>
+        <p className="brand-title">Marcas</p>
       </div>
       <Table striped hover>
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Marca</th>
+          <th>Cantidad</th>
         </tr>
       </thead>
-      <tbody>
+      {totalBrands.map (brands  => {
+        // console.log(Object.keys(brands))
+        // console.log(Object.values(brands))
+        return(
+       <tbody>
         <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+         <td>{Object.keys(brands)}</td>
+         <td>{Object.values(brands)}</td>
         </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Larry the Bird</td>
-          <td>Thornton</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
+        </tbody>
+)
+      })
+     
+}
+    
     </Table>   
     </div>
   );

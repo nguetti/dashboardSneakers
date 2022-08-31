@@ -1,22 +1,43 @@
 import "./DetailRow.css";
+import {useState, useEffect} from 'react';
 
 function DetailRow() {
+  const [totalProducts, settotalProducts] = useState([]);
+  useEffect(() => {
+    console.log("%cse monto el componente", "color: green");
+    fetch("/api/products")
+      .then((result) => result.json())
+      .then((data) => {
+        settotalProducts(data.products[data.products.length -1]);
+ 
+        // const ultimoProducto=settotalProducts[settotalProducts.length-1];
+      });
+  }, []);
+  
+  useEffect(() => {
+    console.log("%cse actualizo el componente", "color: blue");
+  }, [totalProducts]);
+  
+ 
+  useEffect(() => {
+    return () => console.log("%cse desmonto el componente", "color: red");
+  });
+
   return (
+
     <div className="col-12 col-lg-6 p-0 container-DetailRow">
-      <div className="DetailRowTop">Ultimo Producto Agregado</div>
+      <div className="DetailRowTop">Ultimo Producto Agregado </div>
+      
       <div className="DetailRowImage">
-        <img src="/img/18.jpeg" style={{ width: "30%" }} alt="Imagen del ultimo producto agregado"/>
+        
+        <img src= {"/img/products/" + totalProducts.image} style={{ width: "30%" }} alt="Imagen del ultimo producto agregado"/>
       </div>
       <div className="DetailRowContent">
-        <p>Nike Air Max</p>
-        <p>$100.000</p>
+        <p>{totalProducts.name}</p>
+        <p>{totalProducts.price}</p>
       </div>
       <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries,
+      {totalProducts.description}
       </p>
     </div>
   );
